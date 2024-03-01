@@ -1,0 +1,218 @@
+[
+  {
+    "model": "agrobusiness.state",
+    "pk": "09e3048c-e696-4758-9bcd-70ed3669886c",
+    "fields": {
+      "acronym": "AC",
+      "name": "Acre"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "11e2da98-c929-40c6-b215-8bb1351239e4",
+    "fields": {
+      "acronym": "PB",
+      "name": "Paraiba"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "12d017a6-3d4c-422b-bd69-87452205140e",
+    "fields": {
+      "acronym": "CE",
+      "name": "Ceará"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "1a14509f-b0a6-495c-ac8d-4461771862ab",
+    "fields": {
+      "acronym": "BA",
+      "name": "Bahia"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "2e285628-f835-4f70-a96d-200954f268ae",
+    "fields": {
+      "acronym": "MS",
+      "name": "Mato Grosso do Sul"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "456abbe9-217f-4935-b28b-f62e85542423",
+    "fields": {
+      "acronym": "ES",
+      "name": "Espirito Santo"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "4be3234d-60e3-4c6f-81e1-5c6ff46e0642",
+    "fields": {
+      "acronym": "MG",
+      "name": "Minas Gerais"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "610df210-3715-477e-a033-0528eb16a374",
+    "fields": {
+      "acronym": "DF",
+      "name": "Distrito Federal"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "737da113-0fe9-437b-b588-8ab4717fa4b5",
+    "fields": {
+      "acronym": "SC",
+      "name": "Santa Catarina"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "7bb90e44-5e6e-4185-9e03-6a4867223fbd",
+    "fields": {
+      "acronym": "RR",
+      "name": "Roraima"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "7c06472b-d1f1-4919-8af5-efb9ed771dbc",
+    "fields": {
+      "acronym": "RO",
+      "name": "Rondônia"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "930e06d7-6615-4541-9d50-f4532c0f1b8d",
+    "fields": {
+      "acronym": "SP",
+      "name": "São Paulo"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "932e999b-ce28-4df5-97d1-764f793eb3b7",
+    "fields": {
+      "acronym": "MT",
+      "name": "Mato Grosso"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "99fa6cdc-09d4-440d-921c-609e930ba0e7",
+    "fields": {
+      "acronym": "SE",
+      "name": "Sergipe"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "9a07a1d4-6043-4b0f-b076-b33f32751625",
+    "fields": {
+      "acronym": "MA",
+      "name": "Maranhão"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "9f05f77d-5aaf-4b4c-ac67-faeac3700d9f",
+    "fields": {
+      "acronym": "AM",
+      "name": "Amazonas"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "a6fda208-dfe1-43f2-9e26-82e7bd31d323",
+    "fields": {
+      "acronym": "RS",
+      "name": "Rio Grande do Sul"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "b94a91a4-8425-4deb-8e31-fd72e0ba40ca",
+    "fields": {
+      "acronym": "AP",
+      "name": "Amapá"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "c0627c0b-5fed-4e88-92de-0197aa16fec2",
+    "fields": {
+      "acronym": "TO",
+      "name": "Tocantins"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "c2c396ce-4de3-4810-a071-9194c967baca",
+    "fields": {
+      "acronym": "PA",
+      "name": "Pará"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "c45d739b-3f4a-4697-ac66-374bd95a13d2",
+    "fields": {
+      "acronym": "RN",
+      "name": "Rio Grande do Norte"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "cac4b0e6-c4f6-4dff-845e-eedb563b0914",
+    "fields": {
+      "acronym": "PE",
+      "name": "Pernambuco"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "d08834d4-e1e5-4333-a2d3-c2389b7290a9",
+    "fields": {
+      "acronym": "RJ",
+      "name": "Rio de Janeiro"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "d84dc750-7bc7-4918-917c-06145ff62961",
+    "fields": {
+      "acronym": "PI",
+      "name": "Piauí"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "e2c35acf-c210-43c5-baa7-6cad6fed6551",
+    "fields": {
+      "acronym": "AL",
+      "name": "Alagoas"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "f1687b55-38a5-41bb-8e2f-eb6e07194237",
+    "fields": {
+      "acronym": "GO",
+      "name": "Goiás"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "fa2c6dbe-3610-4114-9e7c-1cea4a953e7e",
+    "fields": {
+      "acronym": "PR",
+      "name": "Paraná"
+    }
+  }
+]
