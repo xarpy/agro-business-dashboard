@@ -19,7 +19,7 @@ def test_create_planting(api_client, payload, create_token, create_farm, expecte
     headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
     payload["farm"] = str(create_farm.id)
     response = api_client.post("/api/planting", data=payload, headers=headers, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == expected
 
 
@@ -29,7 +29,7 @@ def test_get_planting(api_client, create_token, create_farm) -> None:
     headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
     plant_type = PlantingType.objects.create(plant_name="milho", farm=create_farm)
     response = api_client.get(f"/api/planting/{plant_type.id}", headers=headers, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == 200
 
 
@@ -55,14 +55,23 @@ def test_update_planting(api_client, payload, create_token, create_farm, expecte
     payload["farm"] = str(create_farm.id)
     plant_type = PlantingType.objects.create(plant_name="milho", farm=create_farm)
     response = api_client.put(f"/api/planting/{plant_type.id}", data=payload, headers=headers, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == expected
 
 
 @pytest.mark.django_db
-def test_chart_cultivation_by_name(api_client, create_token) -> None:
+def test_chart_cultivation_by_name(api_client, django_db_setup, create_token) -> None:
     """_Unit test for validate endpoint for chart cultivation by name"""
     headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
     response = api_client.get("/api/planting/stats/chart/cultivation-by-name", headers=headers, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
+    assert response.status_code == 200
+
+
+@pytest.mark.django_db
+def test_list_planting_type(api_client, django_db_setup, create_token) -> None:
+    """_Unit test for validate endpoint to list all planting types registered"""
+    headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
+    response = api_client.get(f"/api/planting", headers=headers, format="json")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == 200

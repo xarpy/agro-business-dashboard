@@ -1,0 +1,586 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DWWdMcyauOA7IyiMWFWQT8$oxdIDdN8TQ6Sb8svWlH0k94e/AvJg1ZJ2Y9F7TxgvaU=",
+      "last_login": "2024-03-03T03:54:01.961Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-02-29T15:07:18.414Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "09e3048c-e696-4758-9bcd-70ed3669886c",
+    "fields": {
+      "acronym": "AC",
+      "name": "Acre"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "11e2da98-c929-40c6-b215-8bb1351239e4",
+    "fields": {
+      "acronym": "PB",
+      "name": "Paraiba"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "12d017a6-3d4c-422b-bd69-87452205140e",
+    "fields": {
+      "acronym": "CE",
+      "name": "Ceará"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "1a14509f-b0a6-495c-ac8d-4461771862ab",
+    "fields": {
+      "acronym": "BA",
+      "name": "Bahia"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "2e285628-f835-4f70-a96d-200954f268ae",
+    "fields": {
+      "acronym": "MS",
+      "name": "Mato Grosso do Sul"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "456abbe9-217f-4935-b28b-f62e85542423",
+    "fields": {
+      "acronym": "ES",
+      "name": "Espirito Santo"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "4be3234d-60e3-4c6f-81e1-5c6ff46e0642",
+    "fields": {
+      "acronym": "MG",
+      "name": "Minas Gerais"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "610df210-3715-477e-a033-0528eb16a374",
+    "fields": {
+      "acronym": "DF",
+      "name": "Distrito Federal"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "737da113-0fe9-437b-b588-8ab4717fa4b5",
+    "fields": {
+      "acronym": "SC",
+      "name": "Santa Catarina"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "7bb90e44-5e6e-4185-9e03-6a4867223fbd",
+    "fields": {
+      "acronym": "RR",
+      "name": "Roraima"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "7c06472b-d1f1-4919-8af5-efb9ed771dbc",
+    "fields": {
+      "acronym": "RO",
+      "name": "Rondônia"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "930e06d7-6615-4541-9d50-f4532c0f1b8d",
+    "fields": {
+      "acronym": "SP",
+      "name": "São Paulo"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "932e999b-ce28-4df5-97d1-764f793eb3b7",
+    "fields": {
+      "acronym": "MT",
+      "name": "Mato Grosso"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "99fa6cdc-09d4-440d-921c-609e930ba0e7",
+    "fields": {
+      "acronym": "SE",
+      "name": "Sergipe"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "9a07a1d4-6043-4b0f-b076-b33f32751625",
+    "fields": {
+      "acronym": "MA",
+      "name": "Maranhão"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "9f05f77d-5aaf-4b4c-ac67-faeac3700d9f",
+    "fields": {
+      "acronym": "AM",
+      "name": "Amazonas"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "a6fda208-dfe1-43f2-9e26-82e7bd31d323",
+    "fields": {
+      "acronym": "RS",
+      "name": "Rio Grande do Sul"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "b94a91a4-8425-4deb-8e31-fd72e0ba40ca",
+    "fields": {
+      "acronym": "AP",
+      "name": "Amapá"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "c0627c0b-5fed-4e88-92de-0197aa16fec2",
+    "fields": {
+      "acronym": "TO",
+      "name": "Tocantins"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "c2c396ce-4de3-4810-a071-9194c967baca",
+    "fields": {
+      "acronym": "PA",
+      "name": "Pará"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "c45d739b-3f4a-4697-ac66-374bd95a13d2",
+    "fields": {
+      "acronym": "RN",
+      "name": "Rio Grande do Norte"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "cac4b0e6-c4f6-4dff-845e-eedb563b0914",
+    "fields": {
+      "acronym": "PE",
+      "name": "Pernambuco"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "d08834d4-e1e5-4333-a2d3-c2389b7290a9",
+    "fields": {
+      "acronym": "RJ",
+      "name": "Rio de Janeiro"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "d84dc750-7bc7-4918-917c-06145ff62961",
+    "fields": {
+      "acronym": "PI",
+      "name": "Piauí"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "e2c35acf-c210-43c5-baa7-6cad6fed6551",
+    "fields": {
+      "acronym": "AL",
+      "name": "Alagoas"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "f1687b55-38a5-41bb-8e2f-eb6e07194237",
+    "fields": {
+      "acronym": "GO",
+      "name": "Goiás"
+    }
+  },
+  {
+    "model": "agrobusiness.state",
+    "pk": "fa2c6dbe-3610-4114-9e7c-1cea4a953e7e",
+    "fields": {
+      "acronym": "PR",
+      "name": "Paraná"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "1fdc0d79-5432-4773-b2a8-c4a7683d3146",
+    "fields": {
+      "personal_document": "86102420055",
+      "name": "Test 10",
+      "created_at": "2024-03-03T03:57:49.635Z",
+      "updated_at": "2024-03-03T03:57:49.635Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "20722c43-0675-493e-9dc5-1ad91267c783",
+    "fields": {
+      "personal_document": "16258859038",
+      "name": "Test 2",
+      "created_at": "2024-03-03T03:55:35.390Z",
+      "updated_at": "2024-03-03T03:55:35.390Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "38526cb8-1215-40e6-8445-221f98cf336c",
+    "fields": {
+      "personal_document": "44820393000155",
+      "name": "Test 3",
+      "created_at": "2024-03-03T03:55:55.992Z",
+      "updated_at": "2024-03-03T03:55:55.992Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "5d09c633-d940-4585-9337-4db31ec79887",
+    "fields": {
+      "personal_document": "37092118000105",
+      "name": "Test 7",
+      "created_at": "2024-03-03T03:56:59.867Z",
+      "updated_at": "2024-03-03T03:56:59.867Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "7148b5d9-dd72-41f9-990d-469792ea7f93",
+    "fields": {
+      "personal_document": "08635750000141",
+      "name": "Test 5",
+      "created_at": "2024-03-03T03:56:29.148Z",
+      "updated_at": "2024-03-03T03:56:29.148Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "9770affa-d324-4a5e-a440-41c6e6a15eb4",
+    "fields": {
+      "personal_document": "82891090080",
+      "name": "Test 4",
+      "created_at": "2024-03-03T03:56:12.154Z",
+      "updated_at": "2024-03-03T03:56:12.154Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "bac7c7f2-aca9-48f8-9d91-4b76389c40cb",
+    "fields": {
+      "personal_document": "08935957000131",
+      "name": "Test 1",
+      "created_at": "2024-03-03T03:55:19.645Z",
+      "updated_at": "2024-03-03T03:55:19.645Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "ccd21090-c391-43fc-951c-450a54c10722",
+    "fields": {
+      "personal_document": "23388238006",
+      "name": "Test 6",
+      "created_at": "2024-03-03T03:56:45.897Z",
+      "updated_at": "2024-03-03T03:56:45.897Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "d4cd88de-1197-4ae9-8f5e-9be917690bef",
+    "fields": {
+      "personal_document": "76175039000101",
+      "name": "Test 9",
+      "created_at": "2024-03-03T03:57:36.322Z",
+      "updated_at": "2024-03-03T03:57:36.322Z"
+    }
+  },
+  {
+    "model": "agrobusiness.customer",
+    "pk": "dce3ae30-7121-4f44-9afb-25243c315f6b",
+    "fields": {
+      "personal_document": "02810436045",
+      "name": "Test 8",
+      "created_at": "2024-03-03T03:57:18.706Z",
+      "updated_at": "2024-03-03T03:57:18.706Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "0a493ea9-3d61-4959-8823-509dc350fa5f",
+    "fields": {
+      "customer": "9770affa-d324-4a5e-a440-41c6e6a15eb4",
+      "state": "e2c35acf-c210-43c5-baa7-6cad6fed6551",
+      "name": "Fazenda teste 4",
+      "city": "Maceio",
+      "area": "140.00",
+      "farming_area": "70.00",
+      "plant_area": "60.00",
+      "created_at": "2024-03-03T04:01:56.136Z",
+      "updated_at": "2024-03-03T04:01:56.136Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "6f3fd046-89ab-4423-a0b9-98149ce52fa9",
+    "fields": {
+      "customer": "dce3ae30-7121-4f44-9afb-25243c315f6b",
+      "state": "1a14509f-b0a6-495c-ac8d-4461771862ab",
+      "name": "Fazenda teste 8",
+      "city": "Salvador",
+      "area": "170.00",
+      "farming_area": "90.00",
+      "plant_area": "80.00",
+      "created_at": "2024-03-03T04:04:46.221Z",
+      "updated_at": "2024-03-03T04:04:46.221Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "82e4b598-74a4-49c9-bee1-0f8c9bb04fbf",
+    "fields": {
+      "customer": "ccd21090-c391-43fc-951c-450a54c10722",
+      "state": "99fa6cdc-09d4-440d-921c-609e930ba0e7",
+      "name": "Fazenda teste 6",
+      "city": "Aracaju",
+      "area": "160.00",
+      "farming_area": "90.00",
+      "plant_area": "50.00",
+      "created_at": "2024-03-03T04:03:20.209Z",
+      "updated_at": "2024-03-03T04:03:20.209Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "9701e16d-e966-4dea-94ea-917071a2e2ab",
+    "fields": {
+      "customer": "5d09c633-d940-4585-9337-4db31ec79887",
+      "state": "9a07a1d4-6043-4b0f-b076-b33f32751625",
+      "name": "Fazenda teste 7",
+      "city": "São Luiz",
+      "area": "160.00",
+      "farming_area": "80.00",
+      "plant_area": "60.00",
+      "created_at": "2024-03-03T04:04:02.040Z",
+      "updated_at": "2024-03-03T04:04:02.040Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "a972792e-5dc0-48e0-a41c-016cb0a37171",
+    "fields": {
+      "customer": "bac7c7f2-aca9-48f8-9d91-4b76389c40cb",
+      "state": "cac4b0e6-c4f6-4dff-845e-eedb563b0914",
+      "name": "Fazenda teste 1",
+      "city": "Recife",
+      "area": "100.00",
+      "farming_area": "70.00",
+      "plant_area": "30.00",
+      "created_at": "2024-03-03T03:59:08.608Z",
+      "updated_at": "2024-03-03T03:59:08.608Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "b3ca7920-2c31-415b-beea-6e814ac10308",
+    "fields": {
+      "customer": "38526cb8-1215-40e6-8445-221f98cf336c",
+      "state": "12d017a6-3d4c-422b-bd69-87452205140e",
+      "name": "Fazenda teste 3",
+      "city": "Fortaleza",
+      "area": "130.00",
+      "farming_area": "80.00",
+      "plant_area": "50.00",
+      "created_at": "2024-03-03T04:00:43.762Z",
+      "updated_at": "2024-03-03T04:00:43.762Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "bc611636-977f-4a2a-af07-7291e7a2bf6b",
+    "fields": {
+      "customer": "7148b5d9-dd72-41f9-990d-469792ea7f93",
+      "state": "d84dc750-7bc7-4918-917c-06145ff62961",
+      "name": "Fazenda teste 5",
+      "city": "Teresina",
+      "area": "150.00",
+      "farming_area": "90.00",
+      "plant_area": "60.00",
+      "created_at": "2024-03-03T04:02:30.278Z",
+      "updated_at": "2024-03-03T04:02:30.279Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "cc1b4961-f20f-49c1-be77-def776d2efca",
+    "fields": {
+      "customer": "d4cd88de-1197-4ae9-8f5e-9be917690bef",
+      "state": "932e999b-ce28-4df5-97d1-764f793eb3b7",
+      "name": "Fazenda teste 9",
+      "city": "Cuiabá",
+      "area": "190.00",
+      "farming_area": "90.00",
+      "plant_area": "80.00",
+      "created_at": "2024-03-03T04:06:14.305Z",
+      "updated_at": "2024-03-03T04:06:14.305Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "d0843f68-e42c-4277-880d-8a135ab8992b",
+    "fields": {
+      "customer": "1fdc0d79-5432-4773-b2a8-c4a7683d3146",
+      "state": "2e285628-f835-4f70-a96d-200954f268ae",
+      "name": "Fazenda teste 10",
+      "city": "Campo Grande",
+      "area": "200.00",
+      "farming_area": "90.00",
+      "plant_area": "90.00",
+      "created_at": "2024-03-03T04:06:54.256Z",
+      "updated_at": "2024-03-03T04:06:54.256Z"
+    }
+  },
+  {
+    "model": "agrobusiness.farmproperty",
+    "pk": "d7be2f09-d7c5-40b8-b69e-c7b73cde2af9",
+    "fields": {
+      "customer": "20722c43-0675-493e-9dc5-1ad91267c783",
+      "state": "11e2da98-c929-40c6-b215-8bb1351239e4",
+      "name": "Fazenda teste 2",
+      "city": "João Pessoa",
+      "area": "110.00",
+      "farming_area": "70.00",
+      "plant_area": "40.00",
+      "created_at": "2024-03-03T03:59:53.048Z",
+      "updated_at": "2024-03-03T03:59:53.048Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "0a50b30f-2264-451b-b475-d43705ce3aca",
+    "fields": {
+      "plant_name": "Cana de Açucar",
+      "farm": "b3ca7920-2c31-415b-beea-6e814ac10308",
+      "created_at": "2024-03-03T04:08:19.854Z",
+      "updated_at": "2024-03-03T04:08:19.854Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "13cfb530-45d4-4206-9f7c-d4c19bcb93d0",
+    "fields": {
+      "plant_name": "Algodão",
+      "farm": "0a493ea9-3d61-4959-8823-509dc350fa5f",
+      "created_at": "2024-03-03T04:08:39.189Z",
+      "updated_at": "2024-03-03T04:08:39.189Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "1c934a12-c6e0-4374-b75e-098b33a63a2d",
+    "fields": {
+      "plant_name": "Milho",
+      "farm": "82e4b598-74a4-49c9-bee1-0f8c9bb04fbf",
+      "created_at": "2024-03-03T04:09:04.737Z",
+      "updated_at": "2024-03-03T04:09:04.737Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "4a9b7c7b-b6c5-4b61-99cf-d1f751d24c59",
+    "fields": {
+      "plant_name": "Cana de Açucar",
+      "farm": "6f3fd046-89ab-4423-a0b9-98149ce52fa9",
+      "created_at": "2024-03-03T04:09:46.906Z",
+      "updated_at": "2024-03-03T04:09:46.906Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "576bae6a-87cd-4171-bc5c-f768408b8f7b",
+    "fields": {
+      "plant_name": "Soja",
+      "farm": "9701e16d-e966-4dea-94ea-917071a2e2ab",
+      "created_at": "2024-03-03T04:09:32.956Z",
+      "updated_at": "2024-03-03T04:09:32.956Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "82d709ed-e09e-4ed8-92aa-b539ede368c2",
+    "fields": {
+      "plant_name": "Soja",
+      "farm": "d7be2f09-d7c5-40b8-b69e-c7b73cde2af9",
+      "created_at": "2024-03-03T04:07:30.876Z",
+      "updated_at": "2024-03-03T04:07:30.876Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "d4efcffb-c623-4441-9597-e555d269c37e",
+    "fields": {
+      "plant_name": "Milho",
+      "farm": "a972792e-5dc0-48e0-a41c-016cb0a37171",
+      "created_at": "2024-03-03T04:07:21.305Z",
+      "updated_at": "2024-03-03T04:07:21.305Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "f16c85ca-6445-4fa6-9ee7-97b8721296b0",
+    "fields": {
+      "plant_name": "Algodão",
+      "farm": "cc1b4961-f20f-49c1-be77-def776d2efca",
+      "created_at": "2024-03-03T04:09:56.509Z",
+      "updated_at": "2024-03-03T04:09:56.509Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "f5bcdbcc-5085-43af-8237-bc0e7b633f24",
+    "fields": {
+      "plant_name": "Café",
+      "farm": "bc611636-977f-4a2a-af07-7291e7a2bf6b",
+      "created_at": "2024-03-03T04:08:54.775Z",
+      "updated_at": "2024-03-03T04:08:54.775Z"
+    }
+  },
+  {
+    "model": "agrobusiness.plantingtype",
+    "pk": "f72f8048-64df-48ef-aa88-b047420208f7",
+    "fields": {
+      "plant_name": "Café",
+      "farm": "d0843f68-e42c-4277-880d-8a135ab8992b",
+      "created_at": "2024-03-03T04:10:05.275Z",
+      "updated_at": "2024-03-03T04:10:05.275Z"
+    }
+  }
+]

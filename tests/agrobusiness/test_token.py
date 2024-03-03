@@ -17,7 +17,7 @@ def test_get_token(api_client, payload, expected) -> None:
     """_Unit test for validate endpoint to get token"""
     User.objects.create_user("admin", "admin@admin.com", "12345", **{"is_staff": True, "is_superuser": True})
     response = api_client.post("/api/token/", data=payload, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == expected
 
 
@@ -32,5 +32,5 @@ def test_refresh_token(api_client, create_token, payload, expected) -> None:
     """_Unit test for validate endpoint to refresh token"""
     payload["refresh"] = str(create_token)
     response = api_client.post("/api/token/refresh/", data=payload, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == expected

@@ -7,6 +7,8 @@ from django_cpf_cnpj.fields import CNPJ, CPF
 
 
 class State(models.Model):
+    """State Model class"""
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     acronym = models.CharField(max_length=2, null=False, blank=False, help_text="Sigla do estado")
     name = models.CharField(max_length=64, null=False, blank=False, help_text="Nome do estado")
@@ -18,10 +20,16 @@ class State(models.Model):
         ordering = ["acronym"]
 
     def __str__(self) -> str:
+        """Frivate function of the class, overridden, to create a readable representation of the class.
+        Returns:
+            str: Return the readable representation refernce for the class.
+        """
         return f"{self.name}/{self.acronym}"
 
 
 class Customer(models.Model):
+    """Customer Model class"""
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     personal_document = models.CharField(
         max_length=25, null=False, blank=False, help_text="Documento pessoal da usuario, podendo ser CPF ou CNPJ"
@@ -37,20 +45,32 @@ class Customer(models.Model):
         ordering = ["-created_at"]
 
     def clean(self) -> None:
+        """Data treatment function of the model class, created to validate contexts before the save method.
+        Raises:
+            ValidationError: Validation related to the business rule of the model itself. In this case,
+            validating the personal_document field.
+        """
         personal_document = getattr(self, "personal_document")
         if not CPF(personal_document).is_valid() and not CNPJ(personal_document).is_valid():
             raise ValidationError("Tipo de documento CPF/CNPJ invalido!")
         return super().clean()
 
     def __str__(self) -> str:
+        """Frivate function of the class, overridden, to create a readable representation of the class.
+        Returns:
+            str: Return the readable representation refernce for the class.
+        """
         return self.name
 
     def save(self, **kwargs) -> None:
+        """Save function overwritten, adding field validation before the data is recorded."""
         self.clean()
         return super().save(**kwargs)
 
 
 class FarmProperty(models.Model):
+    """FarmProperty Model class"""
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     customer = models.ForeignKey(
         Customer,
@@ -83,6 +103,17 @@ class FarmProperty(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
 
     def clean(self) -> None:
+        """Data treatment function of the model class, created to validate contexts before the save method.
+        Raises:
+            ValidationError: Validation related to the business rule of the model itself. In this case. In this case,
+            validatindg if area field exist.
+            ValidationError: Validation related to the business rule of the model itself. In this case. In this case,
+            validating if farming_area is greater than area
+            ValidationError: Validation related to the business rule of the model itself. In this case. In this case,
+            validating if plant_area is greater than area.
+            ValidationError: Validation related to the business rule of the model itself. In this case. In this case,
+            if the sum of farming_area and plant_area is greater than area.
+        """
         area = getattr(self, "area")
         farming_area = getattr(self, "farming_area")
         plant_area = getattr(self, "plant_area")
@@ -106,17 +137,28 @@ class FarmProperty(models.Model):
 
     @property
     def agricultal_land(self) -> Decimal:
+        """Property field of the model, created to return the calculation between farming_area and plant_area.
+        Returns:
+            Decimal: Returns the sum of these 2 fields.
+        """
         return self.farming_area + self.plant_area
 
     def __str__(self) -> str:
+        """Frivate function of the class, overridden, to create a readable representation of the class.
+        Returns:
+            str: Return the readable representation refernce for the class.
+        """
         return self.name
 
     def save(self, **kwargs) -> None:
+        """Save function overwritten, adding field validation before the data is recorded."""
         self.clean()
         return super().save(**kwargs)
 
 
 class PlantingType(models.Model):
+    """PlantingType Model class"""
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     plant_name = models.CharField(max_length=128, null=False, blank=False, help_text="Tipo de cultivo")
     farm = models.ForeignKey(
@@ -137,4 +179,8 @@ class PlantingType(models.Model):
         ordering = ["-created_at"]
 
     def __str__(self) -> str:
+        """Frivate function of the class, overridden, to create a readable representation of the class.
+        Returns:
+            str: Return the readable representation refernce for the class.
+        """
         return f"{self.farm.name}|{self.plant_name}"

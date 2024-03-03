@@ -21,7 +21,7 @@ def test_create_customer(api_client, payload, create_token, expected) -> None:
     """_Unit test for validate endpoint to register customer"""
     headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
     response = api_client.post("/api/customer", data=payload, headers=headers, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == expected
 
 
@@ -31,7 +31,7 @@ def test_get_customer(api_client, create_token) -> None:
     headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
     customer = Customer.objects.create(personal_document="61526731002", name="John Doe")
     response = api_client.get(f"/api/customer/{customer.id}", headers=headers, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == 200
 
 
@@ -56,5 +56,14 @@ def test_update_customer(api_client, payload, create_token, expected) -> None:
     headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
     customer = Customer.objects.create(personal_document="61526731002", name="John Doe")
     response = api_client.put(f"/api/customer/{customer.id}", data=payload, headers=headers, format="json")
-    logger.info(f"Show example: {response.data}")
+    logger.info(f"Show data: {response.data}")
     assert response.status_code == expected
+
+
+@pytest.mark.django_db
+def test_list_farm(api_client, django_db_setup, create_token) -> None:
+    """_Unit test for validate endpoint to list all customers registered"""
+    headers = {"Authorization": f"Bearer {str(create_token.access_token)}"}
+    response = api_client.get(f"/api/customer", headers=headers, format="json")
+    logger.info(f"Show data: {response.data}")
+    assert response.status_code == 200
