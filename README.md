@@ -22,7 +22,7 @@ pip install --upgrade pip && pip install --require-hashes -r requirements/dev.tx
 After installing all dependencies, you must create a root user and apply the database migrations. The command to execute is:
 
 ```sh
-./manage.py migrate && ./manage.py loaddata adminuser.json state.json
+./manage.py migrate && ./manage.py loaddata test_data.json
 ```
 
 To compile the project, apply the command below:

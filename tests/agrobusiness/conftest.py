@@ -2,10 +2,18 @@ from decimal import Decimal
 
 import pytest
 from django.contrib.auth.models import User
+from django.core.management import call_command
 from rest_framework.test import APIClient
 from rest_framework_simplejwt.tokens import RefreshToken, Token
 
 from agrobusiness.models import Customer, FarmProperty, State
+
+
+@pytest.fixture(scope="session")
+def django_db_setup(django_db_setup, django_db_blocker) -> None:
+    """_Fixture to provide inject all data from fixtures extracted manually by django."""
+    with django_db_blocker.unblock():
+        call_command("loaddata", "test_data.json")
 
 
 @pytest.fixture(scope="function")

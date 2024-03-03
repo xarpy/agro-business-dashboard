@@ -16,6 +16,8 @@ from agrobusiness.serializers import (
 
 
 class StatesViewset(viewsets.GenericViewSet, mixins.ListModelMixin):
+    """State Viewset class"""
+
     serializer_class = StateSerializer
     queryset = State.objects.all()
     permission_classes = [permissions.IsAuthenticated]
@@ -43,7 +45,13 @@ class StatesViewset(viewsets.GenericViewSet, mixins.ListModelMixin):
         },
     )
     @action(detail=False, methods=["get"], url_path="stats/chart/state-farms")
-    def farms_by_state(self, request, *args, **kwargs):
+    def farms_by_state(self, request, *args, **kwargs) -> Response:
+        """Function responsible to return values for the pie chart of farms in each state.
+        Args:
+            request (django.HttpRequest): Receives django resquest instance
+        Returns:
+            Response: Returns the processed value to the graph.
+        """
         result = []
         total_farms = FarmProperty.objects.all().count()
         for state in self.queryset:
@@ -56,12 +64,16 @@ class StatesViewset(viewsets.GenericViewSet, mixins.ListModelMixin):
 
 
 class CustomerViewset(viewsets.ModelViewSet):
+    """Customer Viewset class"""
+
     serializer_class = CustomerSerializer
     queryset = Customer.objects.all()
     permission_classes = [permissions.IsAuthenticated]
 
 
 class FarmPropertyViewset(viewsets.ModelViewSet):
+    """FarmProperty Viewset class"""
+
     serializer_class = FarmPropertySerializer
     queryset = FarmProperty.objects.all()
     permission_classes = [permissions.IsAuthenticated]
@@ -89,6 +101,12 @@ class FarmPropertyViewset(viewsets.ModelViewSet):
     )
     @action(detail=False, methods=["get"], url_path="stats/total-farms")
     def total_farms(self, request, *args, **kwargs):
+        """Function responsible to returns the total number of registered properties
+        Args:
+            request (django.HttpRequest): Receives django resquest instance
+        Returns:
+            Response: Returns the processed value
+        """
         data = {"farms_total": self.queryset.count()}
         return Response(data, status=status.HTTP_200_OK)
 
@@ -114,7 +132,13 @@ class FarmPropertyViewset(viewsets.ModelViewSet):
         },
     )
     @action(detail=False, methods=["get"], url_path="stats/total-areas")
-    def total_farm_areas(self, request, *args, **kwargs):
+    def total_farm_areas(self, request, *args, **kwargs) -> Response:
+        """Function responsible to returns the total area in hectares of the properties
+        Args:
+            request (django.HttpRequest): Receives django resquest instance
+        Returns:
+            Response: Returns the processed value
+        """
         total = 0
         for item in self.queryset:
             total += item.area
@@ -144,7 +168,13 @@ class FarmPropertyViewset(viewsets.ModelViewSet):
         },
     )
     @action(detail=False, methods=["get"], url_path="stats/chart/agricultural-land")
-    def farms_agricultural_land(self, request, *args, **kwargs):
+    def farms_agricultural_land(self, request, *args, **kwargs) -> Response:
+        """Function responsible to returns pie chart values by agricultural land use.
+        Args:
+            request (django.HttpRequest): Receives django resquest instance
+        Returns:
+            Response: Returns the processed value to the graph.
+        """
         result = []
         total_land_used = sum([farm.agricultal_land for farm in self.queryset])
         for farm in self.queryset:
@@ -157,6 +187,8 @@ class FarmPropertyViewset(viewsets.ModelViewSet):
 
 
 class PlantingTypeViewset(viewsets.ModelViewSet):
+    """PlantingType Viewset class"""
+
     serializer_class = PlantingTypeSerializer
     queryset = PlantingType.objects.all()
     permission_classes = [permissions.IsAuthenticated]
@@ -184,7 +216,13 @@ class PlantingTypeViewset(viewsets.ModelViewSet):
         },
     )
     @action(detail=False, methods=["get"], url_path="stats/chart/cultivation-by-name")
-    def planting_type_by_name(self, request, *args, **kwargs):
+    def planting_type_by_name(self, request, *args, **kwargs) -> Response:
+        """Function responsible to return values for the pie chart of cultivation plant types by quantities
+        Args:
+            request (django.HttpRequest): Receives django resquest instance
+        Returns:
+            Response: Returns the processed value to the graph.
+        """
         result = []
         reference_types = set([item.plant_name for item in self.queryset])
         total_cultivation = self.queryset.count()
