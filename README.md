@@ -61,6 +61,8 @@ docker compose exec backend python manage.py <command you want>
 * The project preloads some basic data, such as a list of states and a default admin, for testing purposes. The admin login and password are `admin`, `12345`.
 * For local tests, simply copy `env.example` to the `.env` file in the project's root folder and run the application if building, don't forget to remove the instruction from the `DEBUG` context.
 * To run the unit tests, just follow the pytest instructions.
+* If the swagger doesn't work to download the copy of the file, just access its `api/schema` route and it will download the file to be used in an APIClient of your choice.
+
 
 ## Usage
 
